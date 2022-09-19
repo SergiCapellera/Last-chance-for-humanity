@@ -6,6 +6,10 @@ export const FormComponent = () => {
     //Progress bar
     const [progress, setProgress] = useState(0);
 
+    //Result
+    const [result, setResult] = useState(0);
+
+
     //check anwsers
     const checkInput = e => {
 
@@ -18,6 +22,11 @@ export const FormComponent = () => {
 
             //add progress
             setProgress(progress + 10);
+
+            //add correct
+            setResult(result + 1);
+
+
 
         }
 
@@ -44,7 +53,7 @@ export const FormComponent = () => {
 
             //check if the response is correct
             if (e.target.id === "p1") {
-                if (e.target.value === "Einstein") {
+                if (e.target.value.toLowerCase() === "einstein") {
                     itsCorrect(e.target.id);
                 } else {
                     itsWrong(e.target.id, "Einstein");
@@ -76,7 +85,7 @@ export const FormComponent = () => {
 
             } else if (e.target.id === "p5") {
 
-                if (e.target.value === "Jose") {
+                if (e.target.value.toLowerCase() === "jose") {
                     itsCorrect(e.target.id);
                 } else {
                     itsWrong(e.target.id, "Jose");
@@ -108,7 +117,7 @@ export const FormComponent = () => {
 
             } else if (e.target.id === "p9") {
 
-                if (e.target.value === "Barcelona") {
+                if (e.target.value.toLowerCase() === "barcelona") {
                     itsCorrect(e.target.id);
                 } else {
                     itsWrong(e.target.id, "Barcelona");
@@ -135,7 +144,7 @@ export const FormComponent = () => {
             <div className='form-card'>
                 <div className="form-content">
                     <h1>Last chance for humanity</h1>
-                    <p className="description">Akajfnakjsf afskj asfajs asjfj asfsaj fsa jf a fasfsafafs as fas f asf</p>
+                    <p className="description">The future of humanity depends on you. You won't get another chance, make no mistake.</p>
 
                     <form>
                         {/*p1*/}
@@ -241,6 +250,12 @@ export const FormComponent = () => {
                     </form>
                 </div>
             </div>
+            {(progress === 100 &&
+            <div className='result'>
+                <p>You anwser correctly {result}/10 questions. Do you think humanity deserves a second chance?</p>
+
+            </div>
+            )}
             <div className='progress-bar'>
                 {/*<div className="current-status" style={{width:'50px'}}></div>*/}
                 <div className="current-status" style={{ width: 100 - progress + '%' }}></div>
@@ -249,6 +264,7 @@ export const FormComponent = () => {
             <div className='lom'>
                 <img src={lom} alt="lom"></img>
             </div>
+            
         </div>
     )
 }

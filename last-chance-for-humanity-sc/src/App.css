@@ -128,14 +128,15 @@ select {
 
 /*progress-bar*/
 .progress-bar {
-  width: 30%;
+  width: 100%;
   height: 50px;
   border: 5px solid black;
   border-radius: 25px;
-  margin-left: 2%;
+  margin-left: 30px;
   top: 60px;
   position: fixed;
   background: linear-gradient(90deg, rgb(252, 252, 87) 0%, rgb(252, 164, 5) 50%, rgb(255, 0, 11) 100%);
+  max-width: 600px;
 }
 
 .current-status {
@@ -166,4 +167,81 @@ select {
   margin-top: 200px;
   margin-left: 65px;
   position: fixed;
+}
+.lom img{
+  width: 480px;
+}
+
+/*result*/
+.result{
+  width: 100%;
+  margin-left: 30px;
+  bottom: 60px;
+  position: fixed;
+  max-width: 600px;
+}
+
+.result p{
+  text-align: left;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 900;
+  line-height: 32px;
+}
+
+
+/*Responsive*/
+@media (max-width: 1440px) {
+  .progress-bar {
+    width: 40%;
+  }
+  .lom{
+    width: 40%;
+    margin-top: 200px;
+    margin-left: 5%;
+    position: fixed;
+  }
+  .lom img{
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .form-component {
+    padding-bottom: 150px;
+  }
+  .form-card {
+    width: 90%;
+    margin-right: 5%;
+    margin-bottom: 60px;
+  }
+
+  .progress-bar {
+    width: 80%;
+    margin: 0 !important;
+    top: unset;
+    bottom: 15px;
+    left: 9%;
+  }
+  .lom {
+    width: 103px;
+    margin-top: 0;
+    margin-left: 0;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+  }
+  .lom img{
+    width: 100%;
+  }
+  .result {
+    width: calc(100% - 60px);
+    margin-left: 30px;
+    bottom: unset;
+    position: relative;
+    max-width: 600px;
+    text-align: center;
+    display: block;
+    margin-top: 50px;
+  }
 }
