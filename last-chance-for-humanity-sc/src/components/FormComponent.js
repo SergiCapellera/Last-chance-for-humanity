@@ -9,7 +9,6 @@ export const FormComponent = () => {
     //Result
     const [result, setResult] = useState(0);
 
-
     //check anwsers
     const checkInput = e => {
 
@@ -25,9 +24,6 @@ export const FormComponent = () => {
 
             //add correct
             setResult(result + 1);
-
-
-
         }
 
         //For the wrong anwsers
@@ -130,15 +126,11 @@ export const FormComponent = () => {
                 } else {
                     itsWrong(e.target.id, "Lionel Andrés Messi Cuccittini");
                 }
-
             }
 
-        } else {
-            console.log("esta vacío");
         }
-
-
     }
+
     return (
         <div className='form-component'>
             <div className='form-card'>
@@ -153,8 +145,6 @@ export const FormComponent = () => {
                             <input type="text" id="p1" onBlur={e => checkInput(e)} />
                         </div>
 
-
-
                         {/*p2*/}
                         <div id="d2">
                             <label htmlFor="p2">12 / 4 =</label>
@@ -166,7 +156,6 @@ export const FormComponent = () => {
                             </select>
                         </div>
 
-
                         {/*p3*/}
                         <div id="d3">
                             <label htmlFor="p3">Current year?</label>
@@ -176,7 +165,6 @@ export const FormComponent = () => {
                                 }
                             }} />
                         </div>
-
 
                         {/*p4*/}
                         <div id="d4">
@@ -189,13 +177,11 @@ export const FormComponent = () => {
                             </select>
                         </div>
 
-
                         {/*p5*/}
                         <div id="d5">
                             <label htmlFor="p5">Most used Spanish male name:</label>
-                            <input type="text" id="p5" onBlur={e => checkInput(e)}/>
+                            <input type="text" id="p5" onBlur={e => checkInput(e)} />
                         </div>
-
 
                         {/*p6*/}
                         <div id="d6">
@@ -207,7 +193,6 @@ export const FormComponent = () => {
                                 <option value="Australia">Australia</option>
                             </select>
                         </div>
-
 
                         {/*p7*/}
                         <div id="d7">
@@ -230,41 +215,40 @@ export const FormComponent = () => {
                             }} />
                         </div>
 
-
                         {/*p9*/}
                         <div id="d9">
                             <label htmlFor="p9">Where has been celebrated the 1992 J.J.0.0</label>
-                            <input type="text" id="p9"onBlur={e => checkInput(e)} />
+                            <input type="text" id="p9" onBlur={e => checkInput(e)} />
                         </div>
 
                         {/*p10*/}
                         <div id="d10">
-
                             <label htmlFor="p10">Wich is the best player in the football history?</label>
                             <select type="text" id="p10" onChange={e => checkInput(e)}>
                                 <option value="">Select one....</option>
                                 <option value="Lionel Andrés Messi Cuccittini">Lionel Andrés Messi Cuccittini</option>
                             </select>
                         </div>
-
                     </form>
                 </div>
             </div>
-            {(progress === 100 &&
-            <div className='result'>
-                <p>You anwser correctly {result}/10 questions. Do you think humanity deserves a second chance?</p>
 
-            </div>
+            {(progress === 100 &&
+                <div className='result'>
+                    <p>You anwser correctly {result}/10 questions. Do you think humanity deserves a second chance?</p>
+
+                </div>
             )}
+
             <div className='progress-bar'>
                 {/*<div className="current-status" style={{width:'50px'}}></div>*/}
                 <div className="current-status" style={{ width: 100 - progress + '%' }}></div>
                 <span className='current-value'>{progress}%</span>
             </div>
+
             <div className='lom'>
                 <img src={lom} alt="lom"></img>
             </div>
-            
         </div>
     )
 }
