@@ -1,2 +1,2 @@
 # Last-chance-for-humanity
-CodePen Home Cathedral SW programming test
+Cathedral SW programming test
