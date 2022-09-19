@@ -1,0 +1,169 @@
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/*App.js*/
+body {
+  margin: 0;
+}
+.full{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.form-component {
+  overflow: auto;
+  margin: 0;
+  padding: 30px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0px auto;
+  position: relative;
+  display: block;
+}
+
+.content {
+  margin: 0 15px;
+}
+
+.form-card {
+  width: 50%;
+  float: right;
+  background-color: #ccc;
+  border-radius: 5px;
+  position: relative;
+  display: block;
+}
+
+/*FormComponent.js*/
+.form-content {
+  padding: 30px;
+}
+
+h1 {
+  font-family: 'Bungee Spice';
+  font-size: 28px;
+  line-height: 32px;
+}
+
+.description {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 24px;
+  color: #444;
+  font-weight: bold;
+  line-height: 28px;
+  margin-top: 15px;
+  letter-spacing: -0.5px;
+}
+
+form {
+  margin: 30px 0;
+}
+
+label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  color: #444;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 15px;
+  letter-spacing: -0.5px;
+  margin-bottom: 15px;
+  margin-top: 30px;
+  display: block;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  border-radius: 5px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  color: #444;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  height: 30px;
+  background-color: #fff;
+}
+
+select {
+  width: calc(100% + 10px);
+  height: 36px;
+}
+
+.correct {
+  color: green !important;
+  background-color: lightgreen !important;
+  border: 2px solid green;
+}
+
+.error {
+  color: red !important;
+  background-color: lightcoral !important;
+  border: 2px solid red;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.msg-error {
+  width: 100%;
+  border-radius: 5px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  color: red;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  height: 30px;
+  margin: 5px 5px 0px 5px;
+}
+
+/*progress-bar*/
+.progress-bar {
+  width: 30%;
+  height: 50px;
+  border: 5px solid black;
+  border-radius: 25px;
+  margin-left: 2%;
+  top: 60px;
+  position: fixed;
+  background: linear-gradient(90deg, rgb(252, 252, 87) 0%, rgb(252, 164, 5) 50%, rgb(255, 0, 11) 100%);
+}
+
+.current-status {
+  width: 100%;
+  background-color: white;
+  height: 50px;
+  border-radius: 20px;
+  right: 0;
+  position: absolute;
+  transition: all 500ms;
+}
+
+.current-value {
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 22px;
+  color: #444;
+  font-weight: 900;
+  line-height: 26px;
+  margin-top: 11px;
+  position: absolute;
+}
+/*LOM*/
+.lom{
+  width: 500px;
+  margin-top: 200px;
+  margin-left: 65px;
+  position: fixed;
+}
